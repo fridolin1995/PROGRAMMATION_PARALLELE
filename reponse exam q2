@@ -1,0 +1,28 @@
+  
+                                                                                                                                                                                  Définissons les concepts de mutex et de sémaphore
+
+        Un mutex est une primitive de synchronisation utilisée en programmation informatique pour éviter que des ressources partagées d'un système ne soient utilisées en meme temps.Un mutex est en C une variable du type pthread mutex_t.
+
+	Un sémaphore est une variable du type sem_t et constitue la méthode utilisée couramment pour restreindre à l'accès à des ressources partagées.
+
+
+
+        Role des mutex et des sémaphores
+
+
+           mutex
+
+  .Un mutex sert de verrou,pour nous permettre de protéger des données partagées.
+  .Un mutex protège une variable 
+  .Avant d’entrer dans la section critique chaque processus
+     verouille l’entree dans la section critique
+
+  	Exemple:calculer le factorielle d'un élement
+     
+          sémaphore
+          
+  .un sémaphore s’initialise
+  .Il bloque l’accès à la section critique
+  .après l’execution du code partagé, il libère la section critique 
+
+  Exemple: créer un thread avec sémaphore
